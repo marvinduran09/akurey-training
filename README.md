@@ -1,2 +1,2 @@
 # akurey-training
-To handle akurey training
+To handle akurey training.
