@@ -1,0 +1,30 @@
+img {
+  height: 279px;
+  width: 220px;
+  border-radius: 8%;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  margin-left: 12px;
+}
+
+.img-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.texto-encima-img {
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  width: 180.38px;
+  color:#FFFFFF;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+  
