@@ -1,3 +1,17 @@
+.characters-section {
+  display:flex;
+  justify-content: center;
+  height: 350px;
+  align-items: flex-end;
+  column-gap: 15px;
+}
+
+.characters-section__img-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
 img {
   height: 279px;
   width: 220px;
@@ -5,16 +19,9 @@ img {
   image-rendering: auto;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
-  margin-left: 12px;
 }
 
-.img-container {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-
-.img-text{
+.characters-section__img-container__img-text {
   font-family: 'Roboto Slab', serif;
   font-size: 22px;
   font-weight: 700;
