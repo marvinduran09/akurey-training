@@ -247,7 +247,7 @@ footer {
     justify-content: center;
   }
   #sinopsis__logo {
-    background-image: url("./imgs/one-piece-logo.svg");
+    background-image: url("../images/one-piece-logo.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -255,7 +255,7 @@ footer {
     width: 163px;
   }
   .sinopsis-img {
-    background-image: url("./imgs/image-home.svg");
+    background-image: url("../images/image-home.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -410,7 +410,7 @@ footer {
   }
   .sinopsis-img {
     height: 444px;
-    background-image: url("./imgs/image-home.svg");
+    background-image: url("../images/image-home.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -540,7 +540,7 @@ footer {
     margin-top: 10px;
   }
   .sinopsis-img {
-    background-image: url("./imgs/image-home.svg");
+    background-image: url("../images/image-home.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
