@@ -2,29 +2,235 @@
 <html>
 <head>
 <title>Task 01 HTML-CSS</title>
-    <link rel="stylesheet" href="./src/assets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/task01-html-css/src/assets/style.css">
+    <script src="https://kit.fontawesome.com/b88057bcfa.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="characters-section">
-        <div class="characters-section__img-container">
-            <img src="./src/assets/imgs/monkeydluffy.svg">
-            <div class="characters-section__img-container__img-text">Monkey D. Luffy</div>
+    <header class="container">
+        <nav class="menu container">
+            <div class="menu__hamburger d-lg-none">
+                <i class="fa-solid fa-bars" id="menu__hamburger-icon"></i>
+                <i class="fa-solid fa-x" id="menu__hamburger-x-icon"></i>
+            </div>
+            <div class="menu__logo">
+                <img class="menu__logo-img" src="./src/assets/imgs/one-piece-logo.svg">
+            </div>
+            <ul class="menu__options" id="menu__options">
+                <li class="menu__option">
+                    <a class="menu__link--active" href="#">Home</a></li>
+                <li class="menu__option">
+                    <a class="menu__link" href="characters.html">Characters</a>
+                </li>
+                <li class="menu__option">
+                    <a class="menu__link" href="islands.html">Islands</a>
+                </li>
+                <li class="menu__option">
+                    <a class="menu__link" href="mist-objects.html">Mist Objects</a>
+                </li>
+                <li class="menu__option-languages">
+                    <p class="menu__link d-lg-none">English</p>
+                    <img class="menu__link-usa" src="./src/assets/imgs/usa-flag.svg">
+                    <p class="menu__link d-lg-none">Spanish</p>
+                    <img class="menu__link" src="./src/assets/imgs/spain-flag.svg">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container"> 
+        <div class="sinopsis">
+            <div class="sinopsis-img" id="sinopsis-img">
+            </div>
+            <div class="sinopsis__logo-wrapper">
+                <div id="sinopsis__logo">
+                </div>
+            </div>
+            <div class="sinopsis-text">
+                <h4>Sinopsis</h4>
+                <div class="sinosis-text__paragraph">
+                    <p>
+                        Dawn Island is an island located in the East Blue and where the Goa Kingdom is situated.</p>
+                     <p>
+                        It is the home island of Monkey D. Luffy and the starting point of his journey into piracy, as well as the home island of his father, Monkey D. Dragon.
+                    </p>
+                </div>
+                <div id="sinopsis__read_more_content">
+                    <p>
+                        This is also the adopted home of Portgas D. Ace after the death of his mother and the home of Sabo and his family.
+                    </p>
+                    <p>
+                        Reverse Mountain is an extremely tall mountain at one of the points where the four Blues meet and is one of the two known entrances to the Grand Line.
+                    </p>
+                    <p>
+                        It is located in the Red Line and is the geographical antipode of Mary Geoise.
+                    </p> 
+                </div> 
+                <div class="sinosis-text__read-option">
+                    <i class="fa-solid fa-angle-down"></i>
+                    <p id="sinopsis__read_mode">Read All</p>
+                </div>
+            </div>
         </div>
-        <div class="characters-section__img-container">
-            <img src="./src/assets/imgs/ace.svg">
-            <div class="characters-section__img-container__img-text">Portgas D. Ace</div>
+        <div class="search container">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="search__input" type="text" name="" placeholder="Search Characters, Islands or Objects">
         </div>
-        <div class="characters-section__img-container">
-            <img src="./src/assets/imgs/zoro.svg">
-            <div class="characters-section__img-container__img-text">Roronoa Zoro</div>
+        <div class="characters container">
+            <div class="characters-header">
+                <h3>Characters</h3>
+                <a class="characters-header__link" href="characters.html">See all</a>
+            </div>
+            <div class="characters-body">
+                <div class="characters__img-and-text">
+                    <img class="characters__img" src="./src/assets/imgs/monkeydluffy.svg">
+                    <div class="characters__text">
+                        <h6>Monkey D. Luffy</h6>
+                    </div>  
+                </div>     
+                <div class="characters__img-and-text">
+                    <img class="characters__img" src="./src/assets/imgs/ace.svg">
+                    <div class="characters__text">
+                        <h6>Portgas D. Ace</h6>
+                    </div>
+                </div>
+                <div class="characters__img-and-text d-none d-sm-block d-sm-none d-md-block">
+                    <img  class="characters__img" src="./src/assets/imgs/zoro.svg">
+                    <div class="characters__text">
+                        <h6>Roronoa Zoro</h6>
+                    </div>
+                </div>
+                <div class="characters__img-and-text d-none d-sm-block d-sm-none d-md-block">
+                    <img class="characters__img" src="./src/assets/imgs/nico.svg">
+                    <div class="characters__text">
+                        <h6>Nico Robin</h6>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="characters-section__img-container">
-            <img src="./src/assets/imgs/nico.svg">
-            <div class="characters-section__img-container__img-text">Nico Robin</div>
+        <div class="islands container">
+            <div class="islands-header">
+                <h3>Islands</h3>
+                <a class="islands-header__link" href="islands.html">See all</a>
+            </div> 
+            <div class="islands-body">
+                <div class="islands__img-and-text">
+                    <img class="islands__img" src="./src/assets/imgs/dawn-island.svg">
+                    <div class="islands__text">
+                        <div class="islands__location">
+                            <h6>Dawn Islands</h6>
+                            <div class="islands__location-description-and-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>East Blue</p>
+                            </div>
+                        </div>
+                        <div class="islands__heart d-md-none">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>  
+                </div>
+                <div class="islands__img-and-text">
+                    <img class="islands__img" src="./src/assets/imgs/reverse-mountain.svg">
+                    <div class="islands__text">
+                        <div class="islands__location">
+                            <h6>Reverse Mountain</h6>
+                            <div class="islands__location-description-and-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>Red line</p>
+                            </div>
+                        </div>
+                        <div class="islands__heart d-md-none">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>  
+                </div>
+                <div class="islands__img-and-text d-none d-sm-block d-sm-none d-md-block">
+                    <img class="islands__img" src="./src/assets/imgs/reverse-mountain.svg">
+                    <div class="islands__text">
+                        <div class="islands__location">
+                            <h6>Reverse Mountain</h6>
+                            <div class="islands__location-description-and-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>Red line</p>
+                            </div>
+                        </div>
+                        <div id="islands__heart" class="d-md-none">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </div>  
+                </div>      
+            </div>      
         </div>
-    </div>
+        <div id="mist-object" class="mist-object container">
+            <div class="mist-object-header">
+                <h3>Mist Objects</h3>
+                <a class="mist-object-header__link" href="mist-objects.html">See all</a>
+            </div>
+            <div class="mist-object-bodies">
+                <div class="mist-object-body">
+                    <div class="mist-object__img-and-text">
+                        <img class="mist-object-img" src="./src/assets/imgs/mist-object.svg">
+                        <div class="mist-object__text">
+                            <h6>Gomu Gomu No Mi</h6>
+                            <p>Is a Paramecia-type Devil Fruit that gives the user's body the properties 
+                                of rubber, making the user a Rubber Human. It was then accidentally eaten 
+                                by the series protagonist, Monkey D. Luffy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mist-object__img-and-text">
+                        <img class="mist-object-img" src="./src/assets/imgs/mist-object.svg">
+                        <div class="mist-object__text">
+                            <h6>Gomu Gomu No Mi</h6>
+                            <p>Is a Paramecia-type Devil Fruit that gives the user's body the properties 
+                                of rubber, making the user a Rubber Human. It was then accidentally eaten 
+                                by the series protagonist, Monkey D. Luffy.
+                            </p>
+                        </div>
+                    </div>
+                </div>  
+                <div class="mist-object-body">
+                    <div class="mist-object__img-and-text">
+                        <img class="mist-object-img" src="./src/assets/imgs/mist-object.svg">
+                        <div class="mist-object__text">
+                            <h6>Gomu Gomu No Mi</h6>
+                            <p>Is a Paramecia-type Devil Fruit that gives the user's body the properties 
+                                of rubber, making the user a Rubber Human. It was then accidentally eaten 
+                                by the series protagonist, Monkey D. Luffy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mist-object__img-and-text d-none d-sm-block d-sm-none d-md-block">
+                        <img class="mist-object-img" src="./src/assets/imgs/mist-object.svg">
+                        <div class="mist-object__text">
+                            <h6>Gomu Gomu No Mi</h6>
+                            <p>Is a Paramecia-type Devil Fruit that gives the user's body the properties 
+                                of rubber, making the user a Rubber Human. It was then accidentally eaten 
+                                by the series protagonist, Monkey D. Luffy.
+                            </p>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </main>
+    <footer >
+        <div class="footer__img-wrapper">
+            <img src="./src/assets/imgs/pngwing-footer.svg" class="footer__img-container__img">
+        </div> 
+        <div class="footer__text-wrapper">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit at vel congue scelerisque tortor tortor.</p>
+        </div>           
+    </footer>
+    <script src="./src/script.js">
+    </script>
 </body>
 </html>
+
+
+
+
+
