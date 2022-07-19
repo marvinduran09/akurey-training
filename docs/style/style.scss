@@ -8,8 +8,10 @@ $gray-for-description-text: #F4F4F4;
 $white: #FFFFFF;
 $red: #F30000;
 
-$image-home-url: "./imgs/image-home.svg";
-$image-one-piece-logo-url: "./imgs/one-piece-logo.svg";
+// $image-home-url: "./imgs/image-home.svg";
+// $image-one-piece-logo-url: "./imgs/one-piece-logo.svg";
+$image-home-url: "../images/image-home.svg";
+$image-one-piece-logo-url: "../images/one-piece-logo.svg";
 
 @mixin flex($justify) {
   display: flex;
