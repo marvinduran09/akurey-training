@@ -569,6 +569,17 @@ $image-one-piece-logo-url: "../images/one-piece-logo.svg";
         background-color: $gray-for-active-flag;
         padding: 0px 20px;
         margin-left: 35px;
+        cursor: pointer;
+    }
+
+    .menu__link-spa {
+      padding: 0px 20px;
+      margin-left: 45px;
+      cursor: pointer;
+    }
+
+    #menu__hamburger-icon, #menu__hamburger-x-icon {
+      cursor: pointer;
     }
 }
 
