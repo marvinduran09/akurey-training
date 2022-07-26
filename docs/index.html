@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./style/style.css">
     <script src="https://kit.fontawesome.com/b88057bcfa.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="consumeRealData()">
     <header class="container">
         <nav class="menu container">
             <div class="menu__hamburger d-lg-none">
@@ -85,30 +85,6 @@
                 <a class="characters-header__link" href="./characters.html">See all</a>
             </div>
             <div class="characters-body">
-                <div class="characters__img-and-text">
-                    <img class="characters__img" src="./images/monkeydluffy.svg">
-                    <div class="characters__text">
-                        <h6>Monkey D. Luffy</h6>
-                    </div>  
-                </div>     
-                <div class="characters__img-and-text">
-                    <img class="characters__img" src="./images/ace.svg">
-                    <div class="characters__text">
-                        <h6>Portgas D. Ace</h6>
-                    </div>
-                </div>
-                <div class="characters__img-and-text d-none d-sm-block d-sm-none d-md-block">
-                    <img  class="characters__img" src="./images/zoro.svg">
-                    <div class="characters__text">
-                        <h6>Roronoa Zoro</h6>
-                    </div>
-                </div>
-                <div class="characters__img-and-text d-none d-sm-block d-sm-none d-md-block">
-                    <img class="characters__img" src="./images/nico.svg">
-                    <div class="characters__text">
-                        <h6>Nico Robin</h6>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="islands container">
@@ -117,51 +93,6 @@
                 <a class="islands-header__link" href="./islands.html">See all</a>
             </div> 
             <div class="islands-body">
-                <div class="islands__img-and-text">
-                    <img class="islands__img" src="./images/dawn-island.svg">
-                    <div class="islands__text">
-                        <div class="islands__location">
-                            <h6>Dawn Islands</h6>
-                            <div class="islands__location-description-and-icon">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <p>East Blue</p>
-                            </div>
-                        </div>
-                        <div class="islands__heart d-md-none">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                    </div>  
-                </div>
-                <div class="islands__img-and-text">
-                    <img class="islands__img" src="./images/reverse-mountain.svg">
-                    <div class="islands__text">
-                        <div class="islands__location">
-                            <h6>Reverse Mountain</h6>
-                            <div class="islands__location-description-and-icon">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <p>Red line</p>
-                            </div>
-                        </div>
-                        <div class="islands__heart d-md-none">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                    </div>  
-                </div>
-                <div class="islands__img-and-text d-none d-sm-block d-sm-none d-md-block">
-                    <img class="islands__img" src="./images/reverse-mountain.svg">
-                    <div class="islands__text">
-                        <div class="islands__location">
-                            <h6>Reverse Mountain</h6>
-                            <div class="islands__location-description-and-icon">
-                                <i class="fa-solid fa-location-dot"></i>
-                                <p>Red line</p>
-                            </div>
-                        </div>
-                        <div id="islands__heart" class="d-md-none">
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                    </div>  
-                </div>      
             </div>      
         </div>
         <div id="mist-object" class="mist-object container">
@@ -170,50 +101,6 @@
                 <a class="mist-object-header__link" href="./mist-objects.html">See all</a>
             </div>
             <div class="mist-object-bodies">
-                <div class="mist-object-body">
-                    <div class="mist-object__img-and-text">
-                        <img class="mist-object-img" src="./images/mist-object.svg">
-                        <div class="mist-object__text">
-                            <h6>Gomu Gomu No Mi</h6>
-                            <p>Is a Paramecia-type Devil Fruit that gives the user's body the properties 
-                                of rubber, making the user a Rubber Human. It was then accidentally eaten 
-                                by the series protagonist, Monkey D. Luffy.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="mist-object__img-and-text">
-                        <img class="mist-object-img" src="./images//mist-object.svg">
-                        <div class="mist-object__text">
-                            <h6>Gomu Gomu No Mi</h6>
-                            <p>Is a Paramecia-type Devil Fruit that gives the user's body the properties 
-                                of rubber, making the user a Rubber Human. It was then accidentally eaten 
-                                by the series protagonist, Monkey D. Luffy.
-                            </p>
-                        </div>
-                    </div>
-                </div>  
-                <div class="mist-object-body">
-                    <div class="mist-object__img-and-text">
-                        <img class="mist-object-img" src="./images//mist-object.svg">
-                        <div class="mist-object__text">
-                            <h6>Gomu Gomu No Mi</h6>
-                            <p>Is a Paramecia-type Devil Fruit that gives the user's body the properties 
-                                of rubber, making the user a Rubber Human. It was then accidentally eaten 
-                                by the series protagonist, Monkey D. Luffy.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="mist-object__img-and-text d-none d-sm-block d-sm-none d-md-block">
-                        <img class="mist-object-img" src="./images//mist-object.svg">
-                        <div class="mist-object__text">
-                            <h6>Gomu Gomu No Mi</h6>
-                            <p>Is a Paramecia-type Devil Fruit that gives the user's body the properties 
-                                of rubber, making the user a Rubber Human. It was then accidentally eaten 
-                                by the series protagonist, Monkey D. Luffy.
-                            </p>
-                        </div>
-                    </div>
-                </div>   
             </div>
         </div>
     </main>
