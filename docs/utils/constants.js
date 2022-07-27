@@ -1,0 +1,10 @@
+export const READ_ALL = "Read All";
+export const READ_LESS = "Read Less";
+export const BLOCK = "block";
+export const NONE = "none";
+export const INLINE_BLOCK = "inline-block";
+export const NOT_INITIALIZED = "";
+export const HAMBURGER_MENU_SHOW = 0;
+export const HAMBURGER_MENU_HIDE= "-100%";
+export const OPACITY_SHOW = 1;
+export const OPACITY_HIDE = 0;
