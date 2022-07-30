@@ -1,0 +1,20 @@
+
+@media (min-width: 992px) {
+    .sinopsis-dektop {
+        .sinopsis-img {
+            width: 65%;
+            height: 628px;
+            object-fit: cover;
+            border-radius: 16px 0px 0px 16px;
+            
+        }
+
+        .sinopsis-text {
+            width: 35%;
+            padding: 25px;
+            p {
+                line-height: 20px;
+            }
+        }
+    }
+}

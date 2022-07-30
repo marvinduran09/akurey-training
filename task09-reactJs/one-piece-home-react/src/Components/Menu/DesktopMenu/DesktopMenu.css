@@ -1,0 +1,44 @@
+@media (min-width: 992px) {
+  .desktop-menu {
+    display: flex;
+    justify-content: flex-start;
+    -moz-column-gap: 35px;
+         column-gap: 35px;
+    align-items: center;
+    height: 80px;
+  }
+  .menu__option-languages {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+  .menu__option-languages .menu__option-english {
+    width: 90px;
+    background-color: #ECECEC;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  .desktop-menu {
+    display: flex;
+    justify-content: flex-start;
+    -moz-column-gap: 140px;
+         column-gap: 140px;
+    align-items: center;
+    height: 80px;
+  }
+  .menu__option-languages {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
+  }
+  .menu__option-languages .menu__option-english {
+    width: 90px;
+    background-color: #ECECEC;
+    display: flex;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=DesktopMenu.css.map */

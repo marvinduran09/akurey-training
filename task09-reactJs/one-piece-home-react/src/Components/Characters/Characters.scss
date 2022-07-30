@@ -1,0 +1,105 @@
+@import "../Style/variables.scss";
+@import "../Style/mixins";
+
+.characters {
+    margin-top: 40px;
+
+    .characters-header {
+        @include flex($justify:space-between);
+        align-items: center;
+        h3 {
+            @include roboto-slab($font-size:22px);
+        }
+    
+        .SeeAll {
+            text-decoration: none;
+            color: $sky-blue;
+            @include roboto($font-size:16px);
+        }
+    }
+
+    .characters-body {
+        @include flex($justify:space-between);
+        column-gap: 15px;
+
+        .characters__img-and-text {
+            margin-top: 25px;
+
+            .characters_img {
+                width: 100%;
+            }
+
+            .characters__text {
+                @include flex($justify:center);
+                color: $white;
+                position:absolute;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@mixin tablet-desktop-characters__img-and-text {
+    .characters__img-and-text {
+        width: 25%;
+        position: relative;
+    }    
+}
+
+@media (max-width: 767.98px) {
+
+    .characters__img-and-text {
+        width: 50%;
+        position: relative;
+
+        .characters__text {
+            width: 181px;
+            height: 32px;
+            top: 82%;
+            left: 5%;
+            align-items: center;
+    
+            h6 {
+                @include roboto($font-size:18px);
+                font-weight: 700;
+                line-height: 21.09px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    @include tablet-desktop-characters__img-and-text();
+
+    .characters__text {
+        width: 181px;
+        height: 32px;
+        top: 80%;
+        left: -5%;
+
+
+        h6 {
+            @include roboto-slab($font-size:16px);
+            font-weight: 700;
+            line-height: 21.09px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    @include tablet-desktop-characters__img-and-text();
+
+    .characters__text {
+        width: 181px;
+        height: 38px;
+        top: 85%;
+        left: 20%;
+
+
+        h6 {
+            @include roboto-slab($font-size:22px);
+            font-weight: 700;
+            line-height: 21.09px;
+        }
+    }
+}

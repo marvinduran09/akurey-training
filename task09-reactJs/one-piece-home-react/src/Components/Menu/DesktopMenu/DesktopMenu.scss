@@ -1,0 +1,39 @@
+@import "../../Style/mixins.scss";
+@import "../../Style/variables.scss";
+
+
+@mixin desktop-menu-common {
+    .menu__option-languages {
+        @include flex($justify:space-between);
+        column-gap: 40px;
+
+        .menu__option-english {
+            width: 90px;
+            background-color: $gray-active-language;
+            @include flex($justify:center);
+        }
+    } 
+}
+
+@media (min-width: 992px) {
+    .desktop-menu {
+        @include flex($justify:flex-start);
+        column-gap: 35px;
+        align-items: center;
+        height: 80px;
+    }
+
+    @include desktop-menu-common();
+}
+
+
+@media (min-width: 1200px) {
+    .desktop-menu {
+        @include flex($justify:flex-start);
+        column-gap: 140px;
+        align-items: center;
+        height: 80px;
+    }
+
+    @include desktop-menu-common();
+}

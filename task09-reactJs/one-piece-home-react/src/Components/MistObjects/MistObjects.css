@@ -1,0 +1,137 @@
+.mist-objects {
+  margin-top: 40px;
+}
+
+.mist-object-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mist-object-header h3 {
+  font-family: "Roboto Slab", serif;
+  font-size: 22px;
+}
+.mist-object-header .SeeAll {
+  text-decoration: none;
+  color: #0C75AF;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.mist-object-body .mist-object__img-and-text {
+  position: relative;
+  color: #FFFFFF;
+}
+.mist-object-body .mist-object__img-and-text .mist-object-img {
+  border-radius: 8px;
+}
+.mist-object-body .mist-object__img-and-text .mist-object__text {
+  background-color: rgba(0, 96, 150, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  border-radius: 0px 6px 6px 0px;
+  padding-left: 12px;
+  padding-top: 15px;
+}
+.mist-object-body .mist-object__img-and-text .mist-object__text h6 {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+.mist-object-body .mist-object__img-and-text .mist-object__text p {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+}
+
+@media (max-width: 767.98px) {
+  .mist-objects {
+    margin-bottom: 75px;
+  }
+  .mist-object-body {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    row-gap: 18px;
+    margin-top: 18px;
+  }
+  .mist-object__img-and-text {
+    display: flex;
+    height: 150px;
+    width: 100%;
+  }
+  .mist-object__img-and-text .mist-object-img {
+    width: 30%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .mist-object__img-and-text .mist-object__text {
+    height: 100%;
+    left: 24%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .mist-object__text {
+    height: 100%;
+    top: 0%;
+  }
+  .mist-object-body {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    margin-top: 18px;
+  }
+  .mist-object__img-and-text {
+    display: flex;
+    height: 195px;
+    width: 50%;
+  }
+  .mist-object-img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .mist-object__text {
+    left: 35%;
+  }
+  .mist-object-img {
+    width: 60%;
+  }
+}
+@media (min-width: 992px) {
+  .mist-object__text {
+    height: 100%;
+    top: 0%;
+  }
+  .mist-object-body {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
+    margin-top: 18px;
+  }
+  .mist-object__img-and-text {
+    display: flex;
+    height: 195px;
+    width: 50%;
+  }
+  .mist-object-img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .mist-object__text {
+    left: 26%;
+  }
+  .mist-object__text h6 {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+  }
+  .mist-object-img {
+    width: 42%;
+  }
+}/*# sourceMappingURL=MistObjects.css.map */
