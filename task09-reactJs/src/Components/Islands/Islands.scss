@@ -1,0 +1,142 @@
+@import "../Style/variables.scss";
+@import "../Style/mixins";
+
+.islands {
+    margin-top: 40px;
+
+    .islands-header {
+       @include flex($justify:space-between);
+        align-items: center;
+        h3 {
+            @include roboto-slab($font-size:22px);
+        }
+        .SeeAll {
+            text-decoration: none;
+            color: $sky-blue;
+            @include roboto($font-size:16px);
+        } 
+    }
+
+    .islands-body {
+        @include flex($justify:space-between);
+        column-gap: 15px;
+
+        .islands__img-and-text {
+            margin-top: 25px;
+            position: relative;
+
+            .islands__img {
+                width: 100%;
+            }
+
+            .islands__text {
+                @include flex($justify:space-between);
+                @include blur-background();
+                color: $white;
+                padding-top: 8px;
+                align-items: center;
+                border-radius: 5%;
+                position:absolute;
+
+                .islands__location {
+                    @include flex($justify:flex-start);
+                    flex-direction: column;
+
+                    .islands__location-description-and-icon {
+                        @include flex($justify:flex-start);
+                        column-gap: 10px;
+                        align-items: center;
+                    }
+                }
+            }   
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .islands__text {
+        width: 90%;
+        top: 74%;
+        left: 4%;
+        padding-left: 14px;
+    
+        h6, p {
+          margin: 0;
+          padding: 0;
+        }
+    
+        h6 {
+            @include roboto($font-size:13px);
+            color: $white;
+        }
+    
+        p {
+            @include roboto($font-size:13px);
+            color: $gray-description;
+        }
+      }
+
+    .islands__heart {
+        display: none;
+        color: $red;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .islands__img-and-text {
+        width: 33%;
+
+        .islands__text {
+            width: 90%;
+            height: 48px;
+            top: 74%;
+            left: 4%;
+            padding-left: 14px;
+        
+            h6, p {
+              margin: 0;
+              padding: 0;
+            }
+        
+            h6 {
+                @include roboto-slab($font-size: 16px);
+                color: $white;
+            }
+        
+            p {
+                @include roboto($font-size:14px);
+                color: $gray-description;
+            }
+          }
+    }
+}
+
+@media (min-width: 992px) {
+    .islands__img-and-text {
+        width: 33%;
+
+        .islands__text {
+            width: 90%;
+            height: 74.24px;
+            top: 70%;
+            left: 4%;
+            padding-left: 14px;
+    
+            h6, p {
+                margin: 0;
+                padding: 0;
+            }
+    
+            h6 {
+                @include roboto-slab($font-size:18px);
+                color: $white;
+            }
+    
+            p {
+                @include roboto($font-size:18px);
+                color: $gray-description;
+            }
+        }
+    }
+}
