@@ -1,0 +1,77 @@
+@import "../../Style/variables";
+@import "../../Style/mixins";
+
+@mixin mobile-tablet-languages-common {
+    .menu__option-languages {
+        @include flex($justify:flex-start);
+        column-gap: 50px;
+        top: 360px;
+        position: absolute;
+        background-color: $white;
+        width: 100vw;
+        @include roboto-slab($font-size:16px);
+        color: $gray-menu-text;
+
+        .menu__option-english {
+            @include flex($justify:center);
+            height: 50%;
+            background-color: $gray-active-language;
+            column-gap: 15px;
+            align-items: center;
+
+            .menu__option-english-text {
+                margin-top: 12px;
+            }
+        }
+        .menu__option-spanish {
+            @include flex($justify:center);
+            height: 50%;
+            column-gap: 15px;
+            align-items: center;
+
+            .menu__option-spanish-text {
+                margin-top: 12px;    
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    @include mobile-tablet-languages-common();
+
+    .mobile-tablet-menu {
+        @include flex($justify:flex-start);
+        align-items: center;
+        column-gap: 150px;
+        
+        .hamburgerIcon, .closeIcon {
+            cursor: pointer;
+        }
+    }
+
+    .menu__option-languages {
+        padding-left: 100px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    @include mobile-tablet-languages-common();
+
+    .mobile-tablet-menu {
+        @include flex($justify:flex-start);
+        align-items: center;
+        column-gap: 280px;
+
+        .hamburgerIcon, .closeIcon {
+            cursor: pointer;
+        }
+    }
+
+    .menu__option-languages {
+        padding-left: 180px;
+    }
+
+    .menu__option-english {
+        width: 150px;
+    }
+}
