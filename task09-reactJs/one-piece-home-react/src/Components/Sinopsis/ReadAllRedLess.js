@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons'
-import SinopsisLogo from '../../../src/Components/Image/LogoImage'
 import { changeReadMode } from '../../Slice/ReadModeSlice'
 import { useDispatch } from 'react-redux';
+import logoImage from '../../Images/one-piece-logo.svg'
+import Image from '../Image/ImageComponent' 
 
 function ReadAllRedLess() {
   const [isReadAllShown, setIsReadAllShown] = useState(false);
@@ -20,7 +21,7 @@ function ReadAllRedLess() {
   return (
     <div>
         <div className='sinopsis__logo-wrapper'>
-            {isReadAllShown && <SinopsisLogo/> }
+            {isReadAllShown && <Image src={logoImage} className="sinopsis__logo" alt="logo"/> }
         </div>
         <div className="sinopsis-text">
             <h4>Sinopsis</h4>

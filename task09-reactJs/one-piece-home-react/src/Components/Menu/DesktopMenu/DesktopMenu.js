@@ -1,13 +1,14 @@
 import React from 'react'
 import MenuLinks from '../MenuLinks/MenuLinks';
 import "./DesktopMenu.css";
-import LogoImage from '../../Image/LogoImage';
 import Language from '../Language/Language';
+import logoImage from '../../../Images/one-piece-logo.svg'
+import Image from '../../Image/ImageComponent'
 
 const DesktopMenu = () => {
   return (
     <nav className="desktop-menu">
-      <LogoImage/>
+      <Image src={logoImage} className="sinopsis__logo" alt="logo"/>
       <MenuLinks/>
       <Language/>
     </nav>

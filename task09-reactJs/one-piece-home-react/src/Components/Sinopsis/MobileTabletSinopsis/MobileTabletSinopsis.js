@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 function MobileTabletSinopsis() {
 
   const hamburgerMenuDisplayModeState = useSelector(state => state.hamburgerMenuDisplayMode);
+
   return (
     <div className='sinopsis'>
         {hamburgerMenuDisplayModeState.displayHamburgerMenuOptions ? <SinopsisImage opacity={0}/>: <SinopsisImage/>}

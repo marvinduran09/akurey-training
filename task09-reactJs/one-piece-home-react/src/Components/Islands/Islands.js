@@ -1,17 +1,20 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import "./Islands.css"
-import DawnIslandImage from "../Image/DawnIslandImage"
-import ReverseMountainImage from "../Image/ReverseMountainImage"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faHeart } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from 'react-redux';
+import dawnImage from '../../Images/dawn.svg';
+import reverseMountainImage from '../../Images/reverse-mountain.svg';
+import Image from '../Image/ImageComponent'
 
 function Islands() {
     const readModeState = useSelector(state => state.readMode);
     const readMode = readModeState;
 
     const heartDisplay = {display: readMode.readAll ? 'block' : 'none'}
+
+    const className = "islands__img";
 
     return (
     <div className="islands">
@@ -21,7 +24,7 @@ function Islands() {
         </div>
         <div className='islands-body'>
             <div className="islands__img-and-text">
-                <DawnIslandImage/>
+                <Image src={dawnImage} className={className} alt="dawn islands"/>
                 <div className="islands__text">
                     <div className="islands__location">
                         <h6>Dawn Islands</h6>
@@ -36,7 +39,7 @@ function Islands() {
                 </div>
             </div>
             <div className="islands__img-and-text">
-                <ReverseMountainImage/>
+                <Image src={reverseMountainImage} className={className} alt="reverse mountain"/>
                 <div className="islands__text">
                     <div className="islands__location">
                         <h6>Reverse Mountain</h6>
@@ -51,7 +54,7 @@ function Islands() {
                 </div>  
             </div>
             <div className="islands__img-and-text d-none d-sm-block d-sm-none d-md-block">
-                <ReverseMountainImage/>
+                <Image src={reverseMountainImage} className={className} alt="reverse mountain"/>
                 <div className="islands__text">
                     <div className="islands__location">
                         <h6>Reverse Mountain</h6>

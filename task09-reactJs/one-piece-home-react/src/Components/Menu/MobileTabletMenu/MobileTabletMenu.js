@@ -3,10 +3,12 @@ import MenuLinks from '../MenuLinks/MenuLinks';
 import "./MobileTabletMenu.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faX } from '@fortawesome/free-solid-svg-icons'
-import LogoImage from '../../Image/LogoImage';
 import Language from '../Language/Language';
 import { changeHamburgerMenuDisplayMode } from '../../../Slice/HamburgerMenuDisplayModeSlice'
 import { useDispatch } from 'react-redux';
+
+import logoImage from "../../../Images/one-piece-logo.svg"
+import Image from '../../Image/ImageComponent';
 
 const MobileTabletMenu = () => {
 
@@ -33,7 +35,7 @@ const MobileTabletMenu = () => {
         {open && <MenuLinks/>}
       </nav>
       {open && <Language/>}
-      <LogoImage/>
+      <Image src={logoImage} className="sinopsis__logo" alt="logo"/>
     </div>
   )
 }

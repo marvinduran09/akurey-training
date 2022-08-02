@@ -1,12 +1,15 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import "./MistObjects.css"
-import MistObjectImage from "../Image/MistObjectImage"
 import { useSelector } from 'react-redux';
+import mistObjectImage from '../../Images/object.svg';
+import Image from '../Image/ImageComponent'
 
 function MistObjects() {
     const readModeState = useSelector(state => state.readMode);
     const readMode = readModeState;
+
+    const className = "mist-object-img";
 
   return (
     <div className="mist-objects" style={{ marginBottom: readMode.readAll ? '125px': '75px'}}>
@@ -17,7 +20,7 @@ function MistObjects() {
         <div className="mist-object-bodies">
             <div className="mist-object-body">
                 <div className="mist-object__img-and-text">
-                    <MistObjectImage/>
+                    <Image src={mistObjectImage} className={className} alt={"mistobject"}/>
                     <div className="mist-object__text">
                         <h6>Gomu Gomu No Mi</h6>
                         <p>Is a Paramecia-type Devil Fruit that gives the user's body the properties
@@ -27,7 +30,7 @@ function MistObjects() {
                     </div>
                 </div>  
                 <div className="mist-object__img-and-text">
-                    <MistObjectImage/>
+                    <Image src={mistObjectImage} className={className} alt={"mistobject"}/>
                     <div className="mist-object__text">
                         <h6>Gomu Gomu No Mi</h6>
                         <p>Is a Paramecia-type Devil Fruit that gives the user's body the properties
@@ -39,7 +42,7 @@ function MistObjects() {
             </div>
             <div className="mist-object-body">
                 <div className="mist-object__img-and-text">
-                    <MistObjectImage/>
+                    <Image src={mistObjectImage} className={className} alt={"mistobject"}/>
                     <div className="mist-object__text">
                         <h6>Gomu Gomu No Mi</h6>
                         <p>Is a Paramecia-type Devil Fruit that gives the user's body the properties
@@ -49,7 +52,7 @@ function MistObjects() {
                     </div>
                 </div>  
                 <div className="mist-object__img-and-text d-none d-sm-block d-sm-none d-md-block">
-                    <MistObjectImage/>
+                    <Image src={mistObjectImage} className={className} alt={"mistobject"}/>
                     <div className="mist-object__text">
                         <h6>Gomu Gomu No Mi</h6>
                         <p>Is a Paramecia-type Devil Fruit that gives the user's body the properties
