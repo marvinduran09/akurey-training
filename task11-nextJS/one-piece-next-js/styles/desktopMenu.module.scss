@@ -1,0 +1,43 @@
+@import "./variables.module";
+@import "./mixins.module";
+
+@mixin desktop-menu-common {
+    .menuOptionLanguages {
+        @include flex($justify:space-between);
+        column-gap: 40px;
+
+        .menuOptionEnglish {
+            width:90px;
+            background-color: $gray-active-language;
+            @include flex($justify:center);
+        }
+    } 
+}
+
+@media (max-width: 991.98px) {
+    .desktopMenu {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .desktopMenu {
+        @include flex($justify:flex-start);
+        column-gap: 35px;
+        align-items: center;
+        height: 80px;
+    }
+
+    @include desktop-menu-common();
+}
+
+@media (min-width: 1200px) {
+    .desktopMenu {
+        @include flex($justify:flex-start);
+        column-gap: 140px;
+        align-items: center;
+        height: 80px;
+    }
+
+    @include desktop-menu-common();
+}

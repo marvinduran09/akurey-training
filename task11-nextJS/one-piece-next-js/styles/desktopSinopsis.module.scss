@@ -1,0 +1,35 @@
+@import "./variables.module";
+@import "./mixins.module";
+
+@media (max-width: 991.98px) {
+    .sinopsisDektop {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .sinopsisDektop {
+        @include flex($justify:space-between);
+
+        .sinopsisImg {
+            width: 65%;
+            height: 628px;
+            //height: 100%;
+            object-fit: cover;
+            border-radius: 16px 0px 0px 16px; 
+        }
+
+        .sinopsisText {
+            width: 35%;
+            padding: 25px;
+
+            h4 {
+                @include roboto-slab($font-size:22px);
+            }
+            p {
+                @include roboto($font-size:16px);
+                line-height: 20px;
+            }
+        }
+    }
+}

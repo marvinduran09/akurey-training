@@ -1,0 +1,149 @@
+@import "./variables.module";
+@import "./mixins.module";
+
+.islands {
+    margin-top: 40px;
+
+    .islandsHeader {
+       @include flex($justify:space-between);
+        align-items: center;
+        h3 {
+            @include roboto-slab($font-size:22px);
+        }
+        .seeAll {
+            text-decoration: none;
+            color: $sky-blue;
+            @include roboto($font-size:16px);
+        } 
+    }
+
+    .islandsBody {
+        @include flex($justify:space-between);
+        column-gap: 15px;
+
+        .islandsImgAndText {
+            margin-top: 25px;
+            position: relative;
+
+            .islandsImg {
+                width: 100%;
+            }
+
+            .islandsText {
+                @include flex($justify:space-between);
+                @include blur-background();
+                color: $white;
+                padding-top: 8px;
+                align-items: center;
+                border-radius: 5%;
+                position:absolute;
+
+                .islandsHeart {
+                    display: none;
+                }
+
+                .islandsLocation {
+                    @include flex($justify:flex-start);
+                    flex-direction: column;
+
+                    .islandsLocationDescriptionAndIcon {
+                        @include flex($justify:flex-start);
+                        column-gap: 10px;
+                        align-items: center;
+                    }
+                }
+            }   
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .islandsImgAndText {
+        width: 50%;
+    }
+
+    .islandsText {
+        width: 90%;
+        top: 78%;
+        left: 4%;
+        padding-left: 14px;
+    
+        h6, p {
+          margin: 0;
+          padding: 0;
+        }
+    
+        h6 {
+            @include roboto($font-size:13px);
+            color: $white;
+        }
+    
+        p {
+            @include roboto($font-size:13px);
+            color: $gray-description;
+        }
+    }
+
+    #reverseMountain {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .islandsImgAndText {
+        width: 33%;
+
+        .islandsText {
+            width: 90%;
+            height: 48px;
+            top: 74%;
+            left: 4%;
+            padding-left: 14px;
+        
+            h6, p {
+              margin: 0;
+              padding: 0;
+            }
+        
+            h6 {
+                @include roboto-slab($font-size: 16px);
+                color: $white;
+            }
+        
+            p {
+                @include roboto($font-size:14px);
+                color: $gray-description;
+            }
+          }
+    }
+}
+
+@media (min-width: 992px) {
+    .islandsImgAndText {
+        width: 33%;
+
+        .islandsText {
+            width: 90%;
+            height: 74.24px;
+            top: 70%;
+            left: 4%;
+            padding-left: 14px;
+    
+            h6, p {
+                margin: 0;
+                padding: 0;
+            }
+    
+            h6 {
+                @include roboto-slab($font-size:18px);
+                color: $white;
+            }
+    
+            p {
+                @include roboto($font-size:18px);
+                color: $gray-description;
+            }
+        }
+    }
+}

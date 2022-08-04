@@ -1,0 +1,9 @@
+.sinopsis {
+    margin-top: 15px;
+}
+
+@media (min-width: 992px) {
+    .sinopsis {
+        display: none;
+    }
+}

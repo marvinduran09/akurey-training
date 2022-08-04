@@ -1,0 +1,15 @@
+@import "./mixins.module";
+
+@mixin mobileTabletCommonSinopsisImg {
+    .sinopsisImg {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    @include mobileTabletCommonSinopsisImg();
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    @include mobileTabletCommonSinopsisImg();
+}

@@ -1,0 +1,134 @@
+@import "./variables.module";
+@import "./mixins.module";
+  
+.mistObjects {
+    margin-top: 40px;
+}
+
+.mistObjectHeader {
+    @include flex($justify:space-between);
+    align-items: center;
+
+    h3 {
+        @include roboto-slab($font-size:22px);
+    }
+    .seeAll {
+        text-decoration: none;
+        color: $sky-blue;
+        @include roboto($font-size:16px);
+    } 
+}
+
+.mistObjectBody {
+
+    .mistObjectImgAndText {
+        position: relative; 
+        color: $white;
+
+        .mistObjectImg {
+            border-radius: 8px;
+        }
+
+        .mistObjectText {
+            @include blur-background();
+            position:absolute;
+            border-radius: 0px 6px 6px 0px;
+            padding-left: 12px;
+            padding-top: 15px;
+        
+            h6 {
+                @include roboto($font-size:13px);    
+                line-height: 24px;
+                letter-spacing: 0.5px;
+            }
+            p {
+                @include roboto($font-size:13px);    
+                letter-spacing: 0.4px;
+            }
+        }
+    }
+}
+
+@mixin mist-object-tablet-desktop-common {
+    .mistObjectText {
+        height: 100%;
+        top: 0%;
+    } 
+  
+    .mistObjectBody {
+      @include flex($justify:space-between);
+      column-gap: 15px;
+      margin-top: 18px;
+    }
+  
+    .mistObjectImgAndText {
+      display: flex;
+      height: 195px;
+      width: 50%;
+    }
+  
+    .mistObjectImg {
+      height: 100%;
+      object-fit: cover;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mistObjects {
+        margin-bottom: 75px;
+    }
+
+    .mistObjectBody {
+        @include flex($justify:flex-start);
+        flex-direction: column;
+        row-gap: 18px;
+        margin-top: 18px;
+    }
+
+    .mistObjectImgAndText {
+        display: flex;
+        height:150px;
+        width: 100%;
+
+        .mistObjectImg {
+            width: 30%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mistObjectText {
+            height: 100%;
+            left: 24%;
+        }
+    }
+
+    #object {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    @include mist-object-tablet-desktop-common();
+    .mistObjectText {
+        left: 35%;
+    }
+
+    .mistObjectImg {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+    @include mist-object-tablet-desktop-common();
+
+    .mistObjectText {
+        left: 26%;
+
+        h6 {
+            @include roboto($font-size:16px);
+        }
+    }
+    .mistObjectImg {
+        width: 42%;
+    }
+}
