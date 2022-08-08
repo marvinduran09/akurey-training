@@ -1,0 +1,60 @@
+@import "./variables.module";
+@import "./mixins.module";
+
+.sinosisTextReadButton {
+    border: none;
+    background-color: $white;
+    color: $sky-blue;
+}
+
+.sinopsisText {
+    box-shadow: 0px 0px 8px $box-shadow;   
+    
+    h4 {
+        @include roboto-slab($font-size:22px);
+    }
+    p {
+    @include roboto($font-size:16px);
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    }
+}
+
+.sinosisTextReadOption {
+    @include flex($justify: center);
+    color:$sky-blue;
+    column-gap: 20px;
+    align-items: center;
+    border-top: 1px solid $sky-blue;
+    p {
+        margin-top: 15px;
+        color:$sky-blue;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .sinopsisLogoWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sinopsisText {
+        padding: 10px;
+        margin-top: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .sinopsisText {
+        width: 600px;
+        margin-left: 45px;
+        position: absolute;
+        margin-top: -30px;
+        background-color: $white;
+        padding: 25px;
+    }
+
+    .sinopsisLogoWrapper {
+        display: none;
+    }
+}

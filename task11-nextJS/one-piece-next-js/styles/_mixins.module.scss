@@ -1,0 +1,29 @@
+@mixin flex($justify){
+    display: flex;
+    justify-content: $justify;
+}
+
+@mixin roboto-slab ($font-size) {
+    font-family: "Roboto Slab", serif;
+    font-size: $font-size;
+}
+  
+@mixin roboto ($font-size) {
+    font-family: "Roboto", sans-serif;
+    font-size: $font-size;
+}
+
+@mixin transparency {
+    background-color: rgba(0, 96, 150, 0.5);
+}
+  
+@mixin blur-background {
+    @include transparency();
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+@mixin mask($color){
+    -webkit-mask-image: linear-gradient($color, transparent);
+    mask-image: linear-gradient($color, transparent);
+}
