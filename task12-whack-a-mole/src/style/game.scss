@@ -1,0 +1,225 @@
+@import "./mixins";
+@import "./variables";
+
+body {
+    background-color: $yellow;
+}
+
+button {
+    border-radius: 3px;
+    border: none;
+}
+
+.game {
+    cursor: url($hammer-image), auto;
+}
+
+.whacks-wrapper {
+    width: 100%;
+}
+.input-wrapper {
+    width: 100%;
+    @include flex($justify:center);
+    align-items: center;
+    height: 70px;
+    .player-name-input{
+        width: 80%;
+        height: 50%;
+    }
+}
+
+.start-finish-button-wrapper {
+    width: 100%;
+    height: 70px;
+    @include flex($justify:center);
+    column-gap: 10px; 
+    
+    .start-game-button, .finish-game-button {
+        width: 35%;
+        height: 50%;
+        background-color: $yellow;
+        cursor: pointer;
+    }
+}
+
+.reset-wrapper {
+    width: 100%;
+    height: 70px;
+    @include flex($justify:center);
+
+    .reset-game-button {
+        background-color: $yellow; 
+        width: 80%;
+        height: 50%;
+        cursor: pointer;
+    }
+}
+
+@mixin common-tablet-desktop {
+    .section-one {
+        width: 50%;
+        height: 100%;
+        background-color: $dark;
+        color:white;
+    }
+
+    .section-two {
+        width: 50%;
+        height: 100%;
+
+        .level-wrapper {
+            background-color: $white;
+            @include flex($justify: center);
+            align-items: center;
+            height: 10%;
+            column-gap: 10px;
+            .next-level {
+                height: 50%;
+                background-color: $red;
+                color: white;
+                display: none;
+                cursor: pointer;
+            }
+        }
+
+        .game-play-wrapper {
+            width: 100%;
+            height: 90%;
+            background-color: white;
+            .game {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 auto;
+
+                .hole {
+                    flex: 1 0 33.33%;
+                    overflow: hidden;
+                    position: relative;
+                  }
+                  
+                  .hole:after {
+                    display: block;
+                    background: url($dirt-image) bottom center no-repeat;
+                    background-size: contain;
+                    content: '';
+                    width: 100%;
+                    height:70px;
+                    position: absolute;
+                    z-index: 2;
+                    bottom: -30px;
+                  }
+                  
+                  .mole {
+                    background: url($mole-image) bottom center no-repeat;
+                    background-size: 60%;
+                    position: absolute;
+                    top: 100%;
+                    width: 100%;
+                    height: 100%;
+                    transition:all 0.4s;
+                  }
+                  
+                  .hole.up .mole {
+                    top: 0;
+                  } 
+            }
+        }
+    }    
+}
+
+@media (max-width: 767.98px) {
+
+    .game-body {
+        width: 100vw;
+        height: 100vh;
+
+        .section-one {
+            height: 60%;
+            background-color: $dark;
+            color:white;
+        }
+
+        .level-wrapper {
+            background-color: $white;
+            @include flex($justify: center);
+            align-items: center;
+            height: 100px;
+            column-gap: 10px;
+            .next-level {
+                height: 50%;
+                background-color: $red;
+                color: white;
+                display: none;
+                cursor: pointer;
+            }
+        }
+
+        .game-play-wrapper {
+            width: 100vw;
+            height: 60vh;
+            background-color:$white;
+            .game {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 auto;
+
+                .hole {
+                    flex: 1 0 33.33%;
+                    overflow: hidden;
+                    position: relative;
+                  }
+                  
+                  .hole:after {
+                    display: block;
+                    background: url($dirt-image) bottom center no-repeat;
+                    background-size: contain;
+                    content: '';
+                    width: 100%;
+                    height:70px;
+                    position: absolute;
+                    z-index: 2;
+                    bottom: -30px;
+                  }
+                  
+                  .mole {
+                    background: url($mole-image) bottom center no-repeat;
+                    background-size: 60%;
+                    position: absolute;
+                    top: 100%;
+                    width: 100%;
+                    height: 100%;
+                    transition:all 0.4s;
+                  }
+                  
+                  .hole.up .mole {
+                    top: 0;
+                  } 
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .game-body {
+        width: 100vw;
+        height: 70vh;
+        @include flex($justify:center);
+
+        @include common-tablet-desktop();
+    } 
+}
+
+
+@media (min-width: 992px) {
+    .game-body {
+        width: 100vw;
+        height: 90vh;
+        @include flex($justify:center);
+
+        @include common-tablet-desktop();            
+    }  
+}

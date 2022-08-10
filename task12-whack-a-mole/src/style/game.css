@@ -1,0 +1,281 @@
+:export {
+  white: white;
+  dark: rgb(32, 40, 48);
+  yellow: #ffc600;
+  hoverYellow: hsl(47deg, 37%, 67%);
+  red: rgb(247, 77, 77);
+  hover-red: rgb(244, 139, 139);
+}
+
+body {
+  background-color: #ffc600;
+}
+
+button {
+  border-radius: 3px;
+  border: none;
+}
+
+.game {
+  cursor: url("../assets/imgs/martillo.png"), auto;
+}
+
+.whacks-wrapper {
+  width: 100%;
+}
+
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+.input-wrapper .player-name-input {
+  width: 80%;
+  height: 50%;
+}
+
+.start-finish-button-wrapper {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.start-finish-button-wrapper .start-game-button, .start-finish-button-wrapper .finish-game-button {
+  width: 35%;
+  height: 50%;
+  background-color: #ffc600;
+  cursor: pointer;
+}
+
+.reset-wrapper {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+}
+.reset-wrapper .reset-game-button {
+  background-color: #ffc600;
+  width: 80%;
+  height: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 767.98px) {
+  .game-body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .game-body .section-one {
+    height: 60%;
+    background-color: rgb(32, 40, 48);
+    color: white;
+  }
+  .game-body .level-wrapper {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .game-body .level-wrapper .next-level {
+    height: 50%;
+    background-color: rgb(247, 77, 77);
+    color: white;
+    display: none;
+    cursor: pointer;
+  }
+  .game-body .game-play-wrapper {
+    width: 100vw;
+    height: 60vh;
+    background-color: white;
+  }
+  .game-body .game-play-wrapper .game {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .game-body .game-play-wrapper .game .hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+  }
+  .game-body .game-play-wrapper .game .hole:after {
+    display: block;
+    background: url("../assets/imgs/dirt.svg") bottom center no-repeat;
+    background-size: contain;
+    content: "";
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+  }
+  .game-body .game-play-wrapper .game .mole {
+    background: url("../assets/imgs/mole.svg") bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+  }
+  .game-body .game-play-wrapper .game .hole.up .mole {
+    top: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .game-body {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+  }
+  .game-body .section-one {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(32, 40, 48);
+    color: white;
+  }
+  .game-body .section-two {
+    width: 50%;
+    height: 100%;
+  }
+  .game-body .section-two .level-wrapper {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .game-body .section-two .level-wrapper .next-level {
+    height: 50%;
+    background-color: rgb(247, 77, 77);
+    color: white;
+    display: none;
+    cursor: pointer;
+  }
+  .game-body .section-two .game-play-wrapper {
+    width: 100%;
+    height: 90%;
+    background-color: white;
+  }
+  .game-body .section-two .game-play-wrapper .game {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .game-body .section-two .game-play-wrapper .game .hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+  }
+  .game-body .section-two .game-play-wrapper .game .hole:after {
+    display: block;
+    background: url("../assets/imgs/dirt.svg") bottom center no-repeat;
+    background-size: contain;
+    content: "";
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+  }
+  .game-body .section-two .game-play-wrapper .game .mole {
+    background: url("../assets/imgs/mole.svg") bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+  }
+  .game-body .section-two .game-play-wrapper .game .hole.up .mole {
+    top: 0;
+  }
+}
+@media (min-width: 992px) {
+  .game-body {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+  }
+  .game-body .section-one {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(32, 40, 48);
+    color: white;
+  }
+  .game-body .section-two {
+    width: 50%;
+    height: 100%;
+  }
+  .game-body .section-two .level-wrapper {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .game-body .section-two .level-wrapper .next-level {
+    height: 50%;
+    background-color: rgb(247, 77, 77);
+    color: white;
+    display: none;
+    cursor: pointer;
+  }
+  .game-body .section-two .game-play-wrapper {
+    width: 100%;
+    height: 90%;
+    background-color: white;
+  }
+  .game-body .section-two .game-play-wrapper .game {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .game-body .section-two .game-play-wrapper .game .hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+  }
+  .game-body .section-two .game-play-wrapper .game .hole:after {
+    display: block;
+    background: url("../assets/imgs/dirt.svg") bottom center no-repeat;
+    background-size: contain;
+    content: "";
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+  }
+  .game-body .section-two .game-play-wrapper .game .mole {
+    background: url("../assets/imgs/mole.svg") bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+  }
+  .game-body .section-two .game-play-wrapper .game .hole.up .mole {
+    top: 0;
+  }
+}/*# sourceMappingURL=game.css.map */

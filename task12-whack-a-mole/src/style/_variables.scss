@@ -1,0 +1,18 @@
+$white:white;
+$dark: rgb(32, 40, 48); 
+$yellow: #ffc600;
+$hover-yellow: hsl(47, 37%, 67%);
+$red: rgb(247, 77, 77);
+$hover-red: rgb(244, 139, 139);
+$dirt-image: '../assets/imgs/dirt.svg';
+$mole-image: '../assets/imgs/mole.svg';
+$hammer-image: '../assets/imgs/martillo.png';
+
+:export {
+    white:$white;
+    dark:$dark;
+    yellow:$yellow;
+    hoverYellow:$hover-yellow;
+    red:$red;
+    hover-red:$hover-red;
+}
