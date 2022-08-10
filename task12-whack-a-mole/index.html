@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML + JS + CSS</title>
+  <link rel="stylesheet" href="./src/style/style.css">
+</head>
+<body>
+    <div class="game-header">
+      <h1>Whack-a-mole</h1>
+      <div class="timer-wrapper">
+        <p>Time: <span class="timer">15</span> s</p>
+      </div>
+    </div>
+    <div class="game-body">
+      <div class="section-one">
+        <div class="whacks-wrapper">
+          <p>Player's name: <span class="name-of-player"></span></p>
+          <p>Score: <span class="score">0</span></p>
+          <p>Failed attemps: <span class="failed">0</span></p>
+        </div>
+        <div class="game-control">
+          <div class="input-wrapper">
+            <input class="player-name-input" type="text" placeholder="Enter your name"/>
+          </div>
+          <div class="start-finish-button-wrapper">
+            <button class="start-game-button" onClick="game.startGame()">Start game</button>
+            <button class="finish-game-button" onClick="game.finishGame()">Finish game</button>
+          </div>
+          <div class="reset-wrapper">
+            <button class="reset-game-button" onClick="game.resetGame()">Reset game</button>
+          </div>
+        </div>
+        <div class="ranking-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Player's name</th>
+                <th>Level 1 score</th>
+                <th>Level 2 score</th>
+              </tr>
+            </thead>
+            <tbody id="ranking-performance"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="section-two">
+        <div class="level-wrapper"> 
+          <p>Level: <span class="current-level">1</span></p>
+          <button class="next-level" onClick="game.nextLevel()">Next level</button>
+        </div>
+        <div class="game-play-wrapper">
+          <div class="game">
+            <div class="hole hole1">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole2">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole3">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole4">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole5">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole6">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole7">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole8">
+              <div class="mole"></div>
+            </div>
+            <div class="hole hole9">
+              <div class="mole"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <audio src="src/assets/sounds/hihat.wav" id="failedWhack"></audio>
+  <audio src="src/assets/sounds/kick.wav"  id="successfullWhack"></audio>
+  <script src="./src/game.js"></script>
+</body>
+
+</html>
